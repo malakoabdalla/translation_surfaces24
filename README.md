@@ -16,6 +16,7 @@ https://developer.apple.com/xcode/ (Make sure your operating system is up to dat
 
 ## Flatsurf 
 Install flatsurf directly into sage by running
+`sage -pip install sage-flatsurf`
 `sage -pip install surface dynamics`
 
 https://flatsurf.github.io/sage-flatsurf/examples/defining_surfaces.html
@@ -25,6 +26,8 @@ https://flatsurf.github.io/sage-flatsurf/examples/defining_surfaces.html
 ## To run the notebook
 In a terminal run:
 `sage -n jupyter`
+copy the localhost:8888 url from the kernel terminal output and paste it into VSCode when it asks you what jupyter kernel to use (select the one named Sage)
+
 
 ## Markdown reference
 https://www.digitalocean.com/community/markdown
@@ -43,6 +46,7 @@ Flatsurf
 ## Git instructions
 In the terminal, in the folder for the project (check that with `pwd`)
 Before you make changes to a fresh branch
+`git status` - checks what's going on with git
 `git pull` 
 
 At the end of the day:

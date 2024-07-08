@@ -34,3 +34,19 @@ Python
 Jupyter Notebook
 Sage
 Flatsurf
+
+## Terminal basics
+`pwd` - check what directory you're currently in
+`ls` - list all folders and files in the current folder
+`cd folder-name` - move into that directory 
+
+## Git instructions
+In the terminal, in the folder for the project (check that with `pwd`)
+Before you make changes to a fresh branch
+`git pull` 
+
+At the end of the day:
+`git add -A`
+`git commit -m "your message here"`
+`git push`
+

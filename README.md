@@ -21,6 +21,7 @@ Install flatsurf directly into sage by running
 
 https://flatsurf.github.io/sage-flatsurf/examples/defining_surfaces.html
 https://flatsurf.github.io/sage-flatsurf/examples/defining_surfaces.html
+### these links are the same 
 
 
 ## To run the notebook
@@ -53,4 +54,6 @@ At the end of the day:
 `git add -A`
 `git commit -m "your message here"`
 `git push`
+
+
 

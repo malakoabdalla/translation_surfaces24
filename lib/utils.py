@@ -54,7 +54,7 @@ def compute_valid_perms(elements):
 
     valid_perms = []
 
-    for i, e in enumerate(evens):
+    for i, e in enumerate(evens): #enumerate gives you both the element and the index 
         first_perm = (odds[0], e)
         other_odds = odds[1:]
         other_evens = evens[:i] + evens[i+1:]
@@ -65,3 +65,37 @@ def compute_valid_perms(elements):
             valid_perms.append([first_perm]+perm)
 
     return valid_perms
+
+# we dont want there to be the same pairings ie cannot have T and B (14) and (14), dont wanna include 
+#goal is to output a list of pairs of permutations 
+#two permutations create a pair and check if they share any permutations, if they do share discard, dont.. keep
+def compute_valid_pairs(valid_perms):
+    valid_pairings= []
+    for i,v in enumerate(valid_perms):
+        for j,w in enumerate(valid_perms):
+            first_pair=(v,w)
+            # print(f"v is {v}") #this is to check whats going on in the for loop. f is a formatted print combines text w variable v 
+            # print(f"w is {w}")
+            #enumerate for index and element of list
+            if check_if_perms_share_transposition(v,w):
+                # print("they're equal")
+                continue #use continue to say "dont include"
+            if j< i: 
+                continue 
+            else : 
+                # print(f"they're not equal, appending: {first_pair}")
+                valid_pairings.append(first_pair)
+
+    return valid_pairings
+
+def check_if_perms_share_transposition(perm1, perm2):
+    # e.g. perm1 = [(1, 2), (3, 4), (5, 6)]
+    #      perm2 = [(1, 4), (3, 2), (5, 6)]
+
+    for t1 in perm1:
+        for t2 in perm2:
+            if t1== t2 :
+                return True
+    
+    return False 
+        

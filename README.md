@@ -55,5 +55,11 @@ At the end of the day:
 `git commit -m "your message here"`
 `git push`
 
+# To run on the research servers
+Run
+
+`ssh -t -L 58762:localhost:58762 YOURUSERNAME@magma2.math.wisc.edu sage -n jupyter --no-browser --port-retries 0 --port=58762`
+
+and use your Math IT credentials to log in. Then copy the http://localhost:58762... url that it gives you into VSCode. 
 
 

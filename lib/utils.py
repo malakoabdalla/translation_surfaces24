@@ -1,4 +1,5 @@
 from sage.combinat.permutation import Permutation #, SymmetricGroup
+from sage.all import SymmetricGroup
 
 
 def all_transpositions(n):
